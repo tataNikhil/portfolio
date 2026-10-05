@@ -5,6 +5,8 @@ shows up as a query result. Everything below the console is a normal scrollable 
 
 Built with React + Vite. No UI libraries.
 
+**In case you want to use it: **
+
 ## Run it
 
 ```bash
@@ -15,7 +17,7 @@ npm run build    # production build into dist/
 
 ## Update your resumes (no code needed)
 
-You have two resumes, one per role. They live here:
+I am aiming for Full Stack AI Engineer role. SO, I have two resumes, one per role. They live here:
 
 | Role | File to replace |
 | --- | --- |
@@ -55,16 +57,11 @@ education. Edit it there; the console answers and the page sections both read fr
 
 ## Live site
 
-**https://nikhil-sai-tata.vercel.app** (Vercel project `nikhil-sai-tata`).
+I deployed it in vercel: **https://nikhil-sai-tata.vercel.app** (Vercel project `nikhil-sai-tata`).
 
-To publish changes (resume, photo, text), run this from this folder in Git Bash. The extra settings
-keep Vercel's files on the D: drive because C: is full:
+To publish changes (resume, photo, text), run this from this folder in Git Bash. 
 
 ```bash
 npm_config_cache=D:/npm-cache TMP=D:/tmp TEMP=D:/tmp npx -y vercel@latest deploy --prod --yes --global-config D:/vercel-config
 ```
-
-## Deploy for free (alternative: via GitHub)
-
-Push this folder to a GitHub repo, then import it on **Vercel** or **Netlify** (framework: Vite,
-build command `npm run build`, output folder `dist`). Every push redeploys automatically.
+Hope you like it
