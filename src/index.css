@@ -150,41 +150,6 @@ p { margin: 0; }
 @keyframes fadeIn { from { opacity: 0; } }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
-.role-picker {
-  margin-top: 26px; padding: 16px; border-radius: 14px;
-  background: var(--accent-soft); border: 1px solid #d6e0fb;
-}
-.role-picker-label { font: 600 13px var(--sans); color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
-.role-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.role-option {
-  position: relative; display: flex; align-items: center; gap: 10px; text-align: left;
-  padding: 13px 32px 13px 12px; border-radius: 12px; cursor: pointer;
-  background: var(--surface); border: 1.5px solid var(--line-2); color: var(--text);
-  font-family: var(--sans);
-  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-}
-.role-option:hover { border-color: #93abe8; }
-.role-option.on { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14); }
-.role-icon {
-  flex: none; width: 32px; height: 32px; padding: 6px; border-radius: 8px;
-  background: var(--bg-alt); fill: none; stroke: var(--muted); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
-  transition: background 0.2s, stroke 0.2s;
-}
-.role-option.on .role-icon { background: var(--accent); stroke: #fff; }
-.role-text { display: flex; flex-direction: column; min-width: 0; }
-.role-text b { font-weight: 600; font-size: 15px; white-space: nowrap; }
-.role-text small { font-size: 12.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.role-check {
-  position: absolute; top: 8px; right: 8px; width: 18px; height: 18px; border-radius: 50%;
-  border: 1.5px solid var(--line-2); display: grid; place-items: center; background: var(--surface);
-  transition: background 0.2s, border-color 0.2s;
-}
-.role-check svg { width: 12px; height: 12px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
-.role-option.on .role-check { background: var(--accent); border-color: var(--accent); }
-.role-option.on .role-check svg { opacity: 1; }
-.role-note { margin-top: 10px; font-size: 13.5px; color: var(--text-2); }
-.role-note b { color: var(--accent); font-weight: 600; }
-
 .facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
 .facts a { color: var(--text-2); font-weight: 500; text-decoration: none; }
 .facts a:hover { color: var(--accent); text-decoration: underline; }
@@ -526,8 +491,6 @@ p { margin: 0; }
   .nav::-webkit-scrollbar { display: none; }
   .nav a { padding: 6px 12px; font-size: 14px; white-space: nowrap; }
   .topbar .btn { margin-left: auto; }
-  .role-picker { padding: 12px; }
-  .role-options { grid-template-columns: 1fr; }
   .pill { font-size: 12px; }
   .identity { gap: 16px; }
   .avatar { width: 84px; height: 84px; border-width: 3px; }

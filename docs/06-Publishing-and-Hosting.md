@@ -83,5 +83,5 @@ Instead of running the publish command, you can make every change go live automa
 
 ## Privacy reminder
 
-Everything in `public/` is public: both resume PDFs (which include your **phone number**) and the
-three photos. If you ever want the phone number off the website, upload resume versions without it.
+Everything in `public/` is public: the resume PDF (which includes your **phone number**) and the
+three photos. If you ever want the phone number off the website, upload a resume version without it.

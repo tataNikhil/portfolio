@@ -48,16 +48,13 @@ npm run dev
 ## 1. Replace a resume
 
 1. Export your new resume as PDF.
-2. Copy it into `D:\Essentials\Portfolio\public\resumes\` and **rename it to exactly**:
-   - `ai-engineer.pdf` for the AI Engineer resume, or
-   - `software-engineer.pdf` for the Software Engineer resume.
+2. Copy it into `D:\Essentials\Portfolio\public\resumes\` and **rename it to exactly** `resume.pdf`.
    Replace the old file when Windows asks.
-3. Preview: choose the role, click **Download … resume**, and check it's the new one.
+3. Preview: click **Download resume** and check it's the new one.
 4. **Publish** (file 06).
 
-The file visitors download is named `Nikhil_Sai_Tata_AI_Engineer.pdf` /
-`Nikhil_Sai_Tata_Software_Engineer.pdf`. To change those names, edit `resumeName` in `roles` in
-`src/data.js`.
+The file visitors download is named `Nikhil_Sai_Tata_Resume.pdf`. To change that, edit `resume.name`
+in `src/data.js`.
 
 > Also: if something on the resume changes (numbers, skills, wording), update the website to match.
 > Recruiters notice mismatches.
@@ -122,20 +119,18 @@ Also update these, which are typed directly in other files:
 
 ---
 
-## 5. Change the role headlines, summaries, focus lines
+## 5. Change the headline and summary
 
-Edit `roles` in `src/data.js`:
+Edit `profile` in `src/data.js`:
 
 | Field | Where it shows |
 | --- | --- |
-| `label` | Card title ("AI Engineer") and in buttons ("Download AI Engineer resume") |
-| `focus` | Small grey line in the card ("LLMs · RAG · ML"). Keep it short so it fits. |
+| `title` | "title" row in the console's About answer |
 | `headline` | Blue line under your name |
 | `tagline` | The summary paragraph under the headline |
-| `projectOrder` | Which project appears first for this role (use project `id`s) |
 
-The text "View this portfolio as" and "Summary, project order and resume are tailored for…" is in
-`src/role.jsx`.
+The status pill ("Open to Full Stack AI Engineer roles") and the contact text are in `src/App.jsx`.
+The browser-tab title and link-preview text are in `index.html`.
 
 ---
 
@@ -175,11 +170,7 @@ Find the project in `projects` in `src/data.js` (`id: 'knowyc'`, `'asksql'` or `
 
 1. In `src/data.js`, copy a whole project block `{ id: …, … },` and paste it inside `projects`.
 2. Give it a **new unique `id`** (lowercase, no spaces, e.g. `'chatbot'`) and fill in the fields.
-3. **Important:** add the new `id` to **both** `projectOrder` lists in `roles`, or it won't appear:
-   ```js
-   projectOrder: ['asksql', 'forgery', 'knowyc', 'chatbot'],
-   ```
-   (and never list an `id` that doesn't exist, or the page will go blank).
+3. Projects appear in the order they are listed in `projects`, so put the block where you want it shown.
 4. New projects have no custom illustration; they show the `flow` chips instead. That looks fine.
    A custom illustration can be added as a new SVG component in `src/components/Art.jsx` and
    registered in the `artFor` map at the bottom of that file, using the project's `id`.
@@ -187,7 +178,7 @@ Find the project in `projects` in `src/data.js` (`id: 'knowyc'`, `'asksql'` or `
    `src/engine.js` with `id` equal to the project's `id`, and add that `id` next to
    `case 'knowyc':` in the `Result` switch in `src/components/Console.jsx`.
 
-**Remove a project:** delete its block **and** its `id` from both `projectOrder` lists.
+**Remove a project:** delete its block from `projects`.
 
 ---
 
@@ -301,7 +292,7 @@ Open `src/index.css`. At the top (`:root { … }`):
 | --- | --- | --- |
 | `--accent` | `#1d4ed8` (navy-blue) | Buttons, links, headlines, highlights |
 | `--accent-hover` | `#1e3a8a` | Button hover |
-| `--accent-soft` | `#eef3ff` | Light-blue backgrounds (role box, pills) |
+| `--accent-soft` | `#eef3ff` | Light-blue backgrounds (pills) |
 | `--text` | `#0f172a` | Main text |
 | `--text-2` | `#334155` | Paragraph text |
 | `--muted` | `#64748b` | Grey text |

@@ -1,5 +1,4 @@
-import { profile, roles, stats, projects, experience, skills, education } from '../data.js'
-import { useRole } from '../role.jsx'
+import { profile, resume, stats, projects, experience, skills, education } from '../data.js'
 import { suggestions } from '../engine.js'
 import { useRef } from 'react'
 import { artFor } from './Art.jsx'
@@ -215,12 +214,11 @@ export function EducationView() {
 }
 
 export function ContactView() {
-  const { current } = useRole()
   const rows = [
     ['email', profile.email, `mailto:${profile.email}`],
     ['linkedin', 'in/nikhiltata206', profile.linkedin],
     ['github', 'tataNikhil', profile.github],
-    ['resume', current.resumeName, current.resume],
+    ['resume', resume.name, resume.href],
   ]
   return (
     <div className="table-wrap">
@@ -232,7 +230,7 @@ export function ContactView() {
               <td>{c}</td>
               <td>
                 <a href={href} target={c === 'email' ? undefined : '_blank'} rel="noreferrer"
-                  download={c === 'resume' ? current.resumeName : undefined}>
+                  download={c === 'resume' ? resume.name : undefined}>
                   {h}
                 </a>
               </td>
@@ -247,16 +245,14 @@ export function ContactView() {
 export function ResumeView() {
   return (
     <div className="resumes">
-      {Object.entries(roles).map(([key, r]) => (
-        <div className="resume-row" key={key}>
-          <span className="file-icon" aria-hidden="true">PDF</span>
-          <div>
-            <b>{r.label} resume</b>
-            <p className="muted">{r.resumeName}</p>
-          </div>
-          <a className="btn small" href={r.resume} download={r.resumeName}>Download</a>
+      <div className="resume-row">
+        <span className="file-icon" aria-hidden="true">PDF</span>
+        <div>
+          <b>Resume</b>
+          <p className="muted">{resume.name}</p>
         </div>
-      ))}
+        <a className="btn small" href={resume.href} download={resume.name}>Download</a>
+      </div>
     </div>
   )
 }

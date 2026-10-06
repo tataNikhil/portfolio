@@ -67,7 +67,7 @@ function Result({ id, onAsk }) {
   }
 }
 
-const rowsFor = { projects: 3, experience: 3, skills: 7, contact: 4, hire: 6, resume: 2 }
+const rowsFor = { projects: 3, experience: 3, skills: 7, contact: 4, hire: 6, resume: 1 }
 
 function Entry({ entry, onAsk, onGrow }) {
   const fast = reduceMotion()

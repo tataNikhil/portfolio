@@ -26,11 +26,9 @@
 
 - **IntersectionObserver:** fades sections in as you scroll, and highlights the current section in
   the top bar.
-- **URL parameters + `history.replaceState`:** keeps `?role=ai` / `?role=software` in the address bar.
-- **localStorage:** remembers the visitor's last role choice (optional; the site works without it).
 - **requestAnimationFrame:** the number count-up animation and the experience progress line.
 
 ## Size
 
 The whole site is about **265 KB of JavaScript (83 KB compressed)** plus CSS, three photos
-(13 KB, 47 KB, 81 KB) and two resume PDFs (about 60 KB each).
+(13 KB, 47 KB, 81 KB) and one resume PDF (about 60 KB).

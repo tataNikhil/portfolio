@@ -19,12 +19,10 @@ Portfolio/
 │   ├── samsung-campus.jpg  Photo in the Samsung internship entry
 │   ├── gsa-workshop.jpg    Photo in the Google Student Ambassador entry
 │   └── resumes/
-│       ├── ai-engineer.pdf         AI Engineer resume
-│       └── software-engineer.pdf   Software Engineer resume
+│       └── resume.pdf              Resume
 ├── src/                    The source code
 │   ├── data.js             ★ ALL YOUR CONTENT (text, numbers, projects, skills, education…)
 │   ├── App.jsx             Page layout: top bar, hero, sections, contact, footer
-│   ├── role.jsx            The AI / Software role picker and its memory
 │   ├── engine.js           The console's "brain": which words map to which answer
 │   ├── index.css           ALL the styling (colours, fonts, spacing, mobile layout)
 │   ├── main.jsx            Starts the React app (never needs changing)
@@ -45,7 +43,6 @@ Portfolio/
 | A resume | replace the PDF in `public/resumes/` |
 | A photo | replace the JPG in `public/` (and see file 05 for sizes) |
 | The status pill, hero facts line, contact paragraph, footer, section titles | `src/App.jsx` |
-| What the role picker says ("View this portfolio as…") | `src/role.jsx` |
 | What words the console understands | `src/engine.js` |
 | Colours, fonts, spacing, sizes | `src/index.css` |
 | Browser tab title / link-preview text and image | `index.html` |

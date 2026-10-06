@@ -2,6 +2,9 @@ export const profile = {
   name: 'Nikhil Sai Tata',
   first: 'Nikhil',
   title: 'Full Stack AI Engineer',
+  headline: 'Full Stack AI Engineer · LLM-powered products, built end to end',
+  tagline:
+    'I build AI products from model to interface: LLM and RAG pipelines on AWS Bedrock, the Node.js and Express APIs that serve them, and the React front ends and MySQL schemas that put them in front of real users.',
   location: 'Hyderabad, India',
   email: 'nikhiltata1245@gmail.com',
   linkedin: 'https://www.linkedin.com/in/nikhiltata206',
@@ -10,29 +13,10 @@ export const profile = {
     'Computer Science graduate (B.Tech, 2026) working where AI meets full-stack engineering. I turn natural language into SQL with LLMs, ship REST APIs with Node.js and Express, and design relational schemas that stay fast and secure. I care about systems that are secure, explainable and cheap to run.',
 }
 
-// The two roles Nikhil is targeting. Each has its own resume PDF in public/resumes/.
-// To update a resume, replace that PDF and keep the same file name.
-export const roles = {
-  ai: {
-    label: 'AI Engineer',
-    focus: 'LLMs · RAG · ML',
-    headline: 'AI Engineer · LLMs, RAG & applied machine learning',
-    tagline:
-      'I build LLM-powered systems that people can actually use: RAG pipelines and NL→SQL on AWS Bedrock, ML models for document forensics, and the full-stack apps that put them in front of users.',
-    resume: '/resumes/ai-engineer.pdf',
-    resumeName: 'Nikhil_Sai_Tata_AI_Engineer.pdf',
-    projectOrder: ['asksql', 'forgery', 'knowyc'],
-  },
-  software: {
-    label: 'Software Engineer',
-    focus: 'Full-stack · APIs · Cloud',
-    headline: 'Software Engineer · Full-stack web, APIs & cloud',
-    tagline:
-      'I build secure, maintainable full-stack products: React front ends, Node.js + Express APIs and well-designed MySQL schemas, with AI built in where it actually helps.',
-    resume: '/resumes/software-engineer.pdf',
-    resumeName: 'Nikhil_Sai_Tata_Software_Engineer.pdf',
-    projectOrder: ['knowyc', 'asksql', 'forgery'],
-  },
+// One resume, served from public/resumes/. To update it, replace the PDF and keep the same file name.
+export const resume = {
+  href: '/resumes/resume.pdf',
+  name: 'Nikhil_Sai_Tata_Resume.pdf',
 }
 
 export const stats = [
@@ -45,6 +29,28 @@ export const stats = [
 ]
 
 export const projects = [
+  {
+    id: 'asksql',
+    name: 'AskSQL',
+    full: 'Natural language to SQL with LLMs',
+    kind: 'AI · Samsung Innovation Campus',
+    year: '2024',
+    blurb:
+      'Lets non-technical users query live business data in plain English. An LLM on AWS Bedrock writes the SQL, a retrieval layer helps it understand the schema, and Lambda runs everything end to end.',
+    highlights: [
+      'NL→SQL generation using Amazon Bedrock with Anthropic Claude',
+      'Semantic schema retrieval with Titan Text Embeddings v2 + Bedrock Knowledge Base',
+      'AWS Lambda + Amazon RDS for end-to-end generation, execution and real-time answers',
+      'Prompt engineering + few-shot learning: 95%+ success on 100+ advanced aggregation queries',
+    ],
+    metrics: [
+      ['accuracy', '95%+'],
+      ['queries tested', '100+'],
+    ],
+    stack: ['Amazon Bedrock', 'Anthropic Claude', 'Titan Embeddings', 'RAG', 'Lambda', 'RDS', 'Python'],
+    links: [],
+    flow: ['Question', 'Schema RAG', 'LLM → SQL', 'RDS → Answer'],
+  },
   {
     id: 'knowyc',
     name: 'KnowYC',
@@ -68,28 +74,6 @@ export const projects = [
     stack: ['React 19', 'Node.js', 'Express 5', 'MySQL 8', 'Zod', 'Leaflet', 'Render', 'Aiven'],
     links: [{ label: 'Live site', href: 'https://knowyc.org' }],
     flow: ['React SPA', 'Express API', 'MySQL 8', 'Brevo · Render'],
-  },
-  {
-    id: 'asksql',
-    name: 'AskSQL',
-    full: 'Natural language to SQL with LLMs',
-    kind: 'AI · Samsung Innovation Campus',
-    year: '2024',
-    blurb:
-      'Lets non-technical users query live business data in plain English. An LLM on AWS Bedrock writes the SQL, a retrieval layer helps it understand the schema, and Lambda runs everything end to end.',
-    highlights: [
-      'NL→SQL generation using Amazon Bedrock with Anthropic Claude',
-      'Semantic schema retrieval with Titan Text Embeddings v2 + Bedrock Knowledge Base',
-      'AWS Lambda + Amazon RDS for end-to-end generation, execution and real-time answers',
-      'Prompt engineering + few-shot learning: 95%+ success on 100+ advanced aggregation queries',
-    ],
-    metrics: [
-      ['accuracy', '95%+'],
-      ['queries tested', '100+'],
-    ],
-    stack: ['Amazon Bedrock', 'Anthropic Claude', 'Titan Embeddings', 'RAG', 'Lambda', 'RDS', 'Python'],
-    links: [],
-    flow: ['Question', 'Schema RAG', 'LLM → SQL', 'RDS → Answer'],
   },
   {
     id: 'forgery',

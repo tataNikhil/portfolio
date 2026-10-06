@@ -3,8 +3,6 @@
 | Problem | Likely cause | Fix |
 | --- | --- | --- |
 | **Preview page is blank/white after editing `data.js`** | A missing quote, comma or bracket, or an apostrophe inside `'…'` | Press Ctrl + Z in the editor until it works again. Check the PowerShell/Git Bash window running `npm run dev`; it names the file and line. Run `npm run build` to see the error clearly. |
-| **Page goes blank after adding a project** | An `id` in `projectOrder` doesn't match any project | Make sure every `id` in both `projectOrder` lists exists in `projects` (spelling!). |
-| **New project doesn't show** | Its `id` isn't in `projectOrder` | Add it to **both** role lists. |
 | **`cd: D:EssentialsPortfolio: No such file or directory`** | Backslashes in Git Bash | Use `cd /d/Essentials/Portfolio` in Git Bash, or use PowerShell with `cd D:\Essentials\Portfolio`. |
 | **`npm error nospc` / "insufficient space"** | C: drive is full | Use the publish command with the `D:/npm-cache` settings (file 06), and free space on C:. |
 | **`localhost:5173` won't load** | Preview isn't running | Start it with `npm run dev` (file 05, step 0). |

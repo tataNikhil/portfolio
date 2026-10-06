@@ -2,10 +2,9 @@
 
 ## 30-second version
 
-"My portfolio is a React and Vite single-page app with plain CSS, hosted on Vercel for free. Because
-I'm applying for both AI and software roles, it has a role switch that tailors the headline, project
-order and downloadable resume, and the choice is kept in the URL so I can send recruiters a
-role-specific link. It also has a small 'ask about my work' console inspired by my AskSQL project:
+"My portfolio is a React and Vite single-page app with plain CSS, hosted on Vercel for free. It
+presents me as a Full Stack AI Engineer: I build LLM and ML systems and the full-stack products that
+put them in front of users. It also has a small 'ask about my work' console inspired by my AskSQL project:
 visitors type a question, see a SQL query, and get an answer. That console runs entirely in the
 browser as a keyword-based intent matcher, so it's instant and costs nothing."
 
@@ -22,18 +21,13 @@ keyword lists per topic and renders a pre-defined SQL query and the matching com
 portfolio that's the right trade-off: instant, free, and nothing to break or abuse. AskSQL itself
 is the real LLM version (Bedrock + Claude + RAG over the schema).
 
-**How does the role switch work?**
-A React context holds the current role. It's initialised from the `?role=` URL parameter, then
-localStorage, then a default. Changing it updates the URL with `history.replaceState`, so links are
-shareable and the back button isn't polluted.
-
 **How did you handle performance?**
 No UI framework, plain CSS, SVG illustrations instead of large images, photos resized for the web
 (13–81 KB), images lazy-loaded below the fold, and IntersectionObserver for scroll effects instead
 of scroll listeners where possible.
 
 **Accessibility?**
-Semantic headings and landmarks, a "skip to content" link, radio-group semantics for the role picker,
+Semantic headings and landmarks, a "skip to content" link,
 alt text on photos, visible focus outlines, `aria-live` on the console log, and every animation
 disabled under `prefers-reduced-motion`.
 

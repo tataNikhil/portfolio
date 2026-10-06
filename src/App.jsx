@@ -4,8 +4,7 @@ import { useActiveSection } from './components/Effects.jsx'
 import {
   EducationView, ExperienceView, ProjectCard, SkillsView, StatsView,
 } from './components/Views.jsx'
-import { profile, projects } from './data.js'
-import { RoleSwitch, useRole } from './role.jsx'
+import { profile, projects, resume } from './data.js'
 
 const NAV = [
   ['projects', 'Projects'],
@@ -46,8 +45,6 @@ function useReveal() {
 const YEAR = new Date().getFullYear()
 
 export default function App() {
-  const { current } = useRole()
-  const ordered = current.projectOrder.map((id) => projects.find((p) => p.id === id))
   const active = useActiveSection(NAV_IDS)
   useReveal()
 
@@ -55,7 +52,7 @@ export default function App() {
     ['Email', profile.email, `mailto:${profile.email}`],
     ['LinkedIn', 'linkedin.com/in/nikhiltata206', profile.linkedin],
     ['GitHub', 'github.com/tataNikhil', profile.github],
-    ['Resume', `${current.label} · PDF`, current.resume, current.resumeName],
+    ['Resume', 'PDF', resume.href, resume.name],
   ]
 
   return (
@@ -75,25 +72,24 @@ export default function App() {
               </a>
             ))}
           </nav>
-          <a className="btn small" href={current.resume} download={current.resumeName}>Resume</a>
+          <a className="btn small" href={resume.href} download={resume.name}>Resume</a>
         </div>
       </header>
 
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-copy">
-            <p className="pill"><i className="dot" /> Open to AI &amp; Software Engineering roles · Graduating 2026</p>
+            <p className="pill"><i className="dot" /> Open to Full Stack AI Engineer roles · Graduating 2026</p>
             <div className="identity">
               <img className="avatar" src="/photo.jpg" alt="Portrait of Nikhil Sai Tata" width="120" height="120" />
               <h1>Nikhil Sai Tata</h1>
             </div>
-            <p className="headline" key={`h-${current.label}`}>{current.headline}</p>
-            <p className="tagline" key={current.label}>{current.tagline}</p>
-            <RoleSwitch />
+            <p className="headline">{profile.headline}</p>
+            <p className="tagline">{profile.tagline}</p>
             <div className="cta">
               <a className="btn" href="#projects">View projects</a>
-              <a className="btn ghost" href={current.resume} download={current.resumeName}>
-                Download {current.label} resume
+              <a className="btn ghost" href={resume.href} download={resume.name}>
+                Download resume
               </a>
             </div>
             <ul className="facts">
@@ -116,9 +112,9 @@ export default function App() {
 
         <section className="section reveal" id="projects">
           <SectionHead label="Projects" title="Selected projects"
-            intro="Production-grade work across AI systems and full-stack engineering." />
+            intro="Products built end to end, from the model and the database to the API and the interface." />
           <div className="projects">
-            {ordered.map((p, i) => <ProjectCard key={p.id} project={p} index={i} total={ordered.length} />)}
+            {projects.map((p, i) => <ProjectCard key={p.id} project={p} index={i} total={projects.length} />)}
           </div>
         </section>
 
@@ -143,7 +139,7 @@ export default function App() {
               <span className="eyebrow">Contact</span>
               <h2>Let’s work together</h2>
               <p className="intro">
-                I’m open to full-time roles in AI engineering and software engineering. The quickest way to reach me is by email.
+                I’m open to full-time Full Stack AI Engineer roles. The quickest way to reach me is by email.
               </p>
               <a className="btn" href={`mailto:${profile.email}`}>Email me</a>
             </div>

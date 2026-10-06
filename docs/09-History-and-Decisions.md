@@ -4,8 +4,8 @@ How the site reached its current form, and why. Useful if you wonder "why is it 
 
 ## Goal
 
-An innovative but **professional and clean** portfolio for **two equally important roles**:
-AI Engineer and Software Engineer, each with its own resume.
+An innovative but **professional and clean** portfolio positioning Nikhil as a single profile:
+**Full Stack AI Engineer**.
 
 ## Design iterations
 
@@ -21,15 +21,16 @@ effects.
 
 ## Content decisions
 
-- **Two roles, equal weight:** role picker with two highlighted cards, shareable `?role=` links,
-  separate resumes.
-- **Skills added beyond the original AI resume:** Node.js, Express.js and the rest of the KnowYC stack,
+- **One positioning (6 October 2026):** the earlier AI Engineer / Software Engineer switch was removed
+  so recruiters see one coherent profile, Full Stack AI Engineer, with one resume (the Software
+  Engineer resume, served as `resume.pdf`).
+- **Skills added beyond the original resume:** Node.js, Express.js and the rest of the KnowYC stack,
   because you actually used them.
 - **Test-count claims removed** (405 tests, 357 API + 48 Playwright, WCAG/axe-core) to match the
   updated resumes, which no longer mention them.
-- **AskSQL model wording:** "Anthropic Claude" (matches the current AI resume; "Haiku 4.5" removed).
+- **AskSQL model wording:** "Anthropic Claude" ("Haiku 4.5" removed).
 - **KnowYC link:** https://knowyc.org.
-- **Phone number** not shown on the page (it's still inside the resume PDFs).
+- **Phone number** not shown on the page (it's still inside the resume PDF).
 - **Neutral wording about you** in the console ("What has Nikhil built?") instead of he/his.
 
 ## Photos
@@ -44,8 +45,7 @@ effects.
 
 | What | Original location |
 | --- | --- |
-| AI resume | `D:\Essentials\Tata_Resume.pdf` |
-| Software resume | `D:\Essentials\NIkhil_Resume.pdf` |
+| Resume | `D:\Essentials\NIkhil_Resume.pdf` |
 | KnowYC documentation | `D:\temp trash\proj-Doc` |
 | NPTEL certificate | https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S24330473204365027.pdf |
 

@@ -7,8 +7,6 @@ data.js (your content)
    │
    ├──► App.jsx (page layout) ──► Views.jsx (cards, timeline, skills…) ──► Art.jsx (illustrations)
    │
-   ├──► role.jsx (AI / Software choice) ──► changes headline, summary, project order, resume
-   │
    └──► Console.jsx (question box) ──► engine.js (understands the question) ──► Views.jsx (answer)
 ```
 
@@ -17,16 +15,6 @@ read from it, so if you change something there, it changes everywhere.
 
 When you run `npm run build`, Vite turns all of this into plain HTML/CSS/JS files in `dist/`.
 Vercel builds the same thing on its servers when you publish.
-
-## The role picker (`src/role.jsx`)
-
-1. When the page opens, it picks the role from, in order:
-   - the link (`?role=ai` or `?role=software`),
-   - the visitor's last choice (saved in their browser),
-   - otherwise **AI Engineer**.
-2. The chosen role's settings come from `roles` in `data.js`: `label`, `focus`, `headline`, `tagline`,
-   `resume`, `resumeName`, `projectOrder`.
-3. Clicking a card updates the page instantly and rewrites the link in the address bar.
 
 ## The question console (`src/components/Console.jsx` + `src/engine.js`)
 
@@ -67,4 +55,4 @@ It only keeps the last 8 questions, and it respects "reduce motion" (no typing a
 ## Link previews
 
 `index.html` contains "Open Graph" tags so that sharing the link on LinkedIn/WhatsApp shows your name,
-"AI & Software Engineer", a description and your portrait (`https://nikhil-sai-tata.vercel.app/photo.jpg`).
+"Full Stack AI Engineer", a description and your portrait (`https://nikhil-sai-tata.vercel.app/photo.jpg`).
