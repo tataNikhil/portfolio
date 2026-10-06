@@ -3,7 +3,7 @@
 ## The big picture
 
 ```
-data.js (your content)
+data.js (all content)
    │
    ├──► App.jsx (page layout) ──► Views.jsx (cards, timeline, skills…) ──► Art.jsx (illustrations)
    │
@@ -11,10 +11,10 @@ data.js (your content)
 ```
 
 All content comes from **one file, `src/data.js`**. Both the page sections and the console answers
-read from it, so if you change something there, it changes everywhere.
+read from it, so a change there shows up everywhere.
 
-When you run `npm run build`, Vite turns all of this into plain HTML/CSS/JS files in `dist/`.
-Vercel builds the same thing on its servers when you publish.
+Running `npm run build` makes Vite turn all of this into plain HTML/CSS/JS files in `dist/`.
+Vercel builds the same thing on its servers on every publish.
 
 ## The question console (`src/components/Console.jsx` + `src/engine.js`)
 
@@ -54,5 +54,5 @@ It only keeps the last 8 questions, and it respects "reduce motion" (no typing a
 
 ## Link previews
 
-`index.html` contains "Open Graph" tags so that sharing the link on LinkedIn/WhatsApp shows your name,
-"Full Stack AI Engineer", a description and your portrait (`https://nikhil-sai-tata.vercel.app/photo.jpg`).
+`index.html` contains "Open Graph" tags so that sharing the link on LinkedIn/WhatsApp shows my name,
+"Full Stack AI Engineer", a description and my portrait (`https://nikhil-sai-tata.vercel.app/photo.jpg`).

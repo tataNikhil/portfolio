@@ -10,7 +10,7 @@ Every change follows the same 3 steps:
 
 ## 0. Before you start: opening the preview
 
-The preview shows your local copy at `http://localhost:5173` and refreshes automatically when you
+The preview shows the local copy at `http://localhost:5173` and refreshes automatically when you
 save a file.
 
 **Option A: PowerShell**
@@ -37,17 +37,17 @@ npm run dev
 
 - Text goes inside quotes: `'like this'`.
 - Keep the **commas** at the end of lines and between items.
-- If your text contains an apostrophe, use the curly one (`’`) or write `\'`.
+- If the text contains an apostrophe, use the curly one (`’`) or write `\'`.
   - ✅ `'I’m open to roles'` ✅ `'I\'m open to roles'` ❌ `'I'm open to roles'`
 - Lists use square brackets: `['React', 'Node.js', 'MySQL']`.
-- After saving, look at the preview. If the page goes blank, you probably broke a quote or comma;
+- After saving, look at the preview. If the page goes blank, a quote or comma is probably broken;
   press **Ctrl + Z** to undo and try again (see file 07).
 
 ---
 
 ## 1. Replace a resume
 
-1. Export your new resume as PDF.
+1. Export the new resume as PDF.
 2. Copy it into `D:\Essentials\Portfolio\public\resumes\` and **rename it to exactly** `resume.pdf`.
    Replace the old file when Windows asks.
 3. Preview: click **Download resume** and check it's the new one.
@@ -61,14 +61,14 @@ in `src/data.js`.
 
 ---
 
-## 2. Replace your portrait (top of page)
+## 2. Replace the portrait (top of page)
 
 1. Use a head-and-shoulders photo with a plain background, ideally at least 400 × 400 px.
 2. Save it as `D:\Essentials\Portfolio\public\photo.jpg` (replace the old one).
-3. Preview. If your head sits too high or low in the circle, open `src/index.css`, search for
+3. Preview. If the head sits too high or low in the circle, open `src/index.css`, search for
    `object-position: 50% 38%` (in `.avatar`) and change the second number:
    - smaller (e.g. `30%`) → shows more of the top of the image,
-   - bigger (e.g. `45%`) → shows more of the lower part (your head moves up).
+   - bigger (e.g. `45%`) → shows more of the lower part (the head moves up).
 4. **Publish.**
 
 ---
@@ -86,14 +86,14 @@ in `src/data.js`.
 4. Preview, then **publish.**
 
 **Add a photo to an experience that has none** (e.g. Vodafone): copy a `photo: { … },` block from
-Samsung into that entry, change `src` to your new file name (e.g. `'/vodafone.jpg'`) and put the
+Samsung into that entry, change `src` to the new file name (e.g. `'/vodafone.jpg'`) and put the
 file in `public/`.
 
 **Remove a photo:** delete the whole `photo: { … },` block from that entry.
 
 ---
 
-## 4. Change your name, email, LinkedIn, GitHub, location
+## 4. Change name, email, LinkedIn, GitHub, location
 
 Edit `profile` at the top of `src/data.js`:
 
@@ -126,7 +126,7 @@ Edit `profile` in `src/data.js`:
 | Field | Where it shows |
 | --- | --- |
 | `title` | "title" row in the console's About answer |
-| `headline` | Blue line under your name |
+| `headline` | Blue line under the name |
 | `tagline` | The summary paragraph under the headline |
 
 The status pill ("Open to Full Stack AI Engineer roles") and the contact text are in `src/App.jsx`.
@@ -214,7 +214,7 @@ Edit `skills` in `src/data.js`:
 
 - Add/remove a skill: edit the `items` list.
 - Add a new group: copy a line, give it a new `table` (any unique word) and `label`.
-- Only list skills you can talk about in an interview.
+- Only list skills I can talk about in an interview.
 
 ---
 
@@ -236,7 +236,7 @@ Edit `education.entries` in `src/data.js`:
 `core` is the "Core coursework" tags list.
 
 The quick fact **"B.Tech CS · CGPA 8.44"** in the hero is typed in `src/App.jsx` (search `CGPA`);
-update it too if your CGPA changes.
+update it too if the CGPA changes.
 
 ## 12. Add a certification
 
@@ -262,10 +262,10 @@ In `src/App.jsx`:
 
 | Text | Search for |
 | --- | --- |
-| Status pill | `Open to AI` |
+| Status pill | `Open to Full Stack` |
 | Quick facts line (location · CGPA · LinkedIn · GitHub) | `className="facts"` |
 | Section titles ("Selected projects", "Technical skills"…) | `<SectionHead` |
-| "Production-grade work across…" | `intro=` |
+| "Products built end to end…" | `intro=` |
 | Contact heading and paragraph | `Let’s work together` |
 | Footer | `className="footer"` |
 | Top bar links | `const NAV` |

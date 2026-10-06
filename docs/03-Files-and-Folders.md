@@ -15,13 +15,13 @@ Portfolio/
 ├── README.md               Short developer notes
 ├── public/                 Files served exactly as they are
 │   ├── favicon.svg         Browser-tab icon ("NT")
-│   ├── photo.jpg           Your round portrait at the top
+│   ├── photo.jpg           Round portrait at the top
 │   ├── samsung-campus.jpg  Photo in the Samsung internship entry
 │   ├── gsa-workshop.jpg    Photo in the Google Student Ambassador entry
 │   └── resumes/
-│       └── resume.pdf              Resume
+│       └── resume.pdf      Resume
 ├── src/                    The source code
-│   ├── data.js             ★ ALL YOUR CONTENT (text, numbers, projects, skills, education…)
+│   ├── data.js             ★ ALL CONTENT (text, numbers, projects, skills, education…)
 │   ├── App.jsx             Page layout: top bar, hero, sections, contact, footer
 │   ├── engine.js           The console's "brain": which words map to which answer
 │   ├── index.css           ALL the styling (colours, fonts, spacing, mobile layout)
@@ -52,5 +52,5 @@ Portfolio/
 
 | Folder | What it is |
 | --- | --- |
-| `D:\vercel-config` | Your Vercel login for the command line. Private. |
-| `D:\npm-cache`, `D:\tmp` | Download cache and temp files used when publishing, because C: is full. Safe to delete; they'll be re-created. |
+| `D:\vercel-config` | Vercel login for the command line. Private. |
+| `D:\npm-cache`, `D:\tmp` | Download cache and temp files used when publishing, because my C: drive is full. Safe to delete; they'll be re-created. |

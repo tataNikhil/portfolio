@@ -7,7 +7,7 @@
 | **`npm error nospc` / "insufficient space"** | C: drive is full | Use the publish command with the `D:/npm-cache` settings (file 06), and free space on C:. |
 | **`localhost:5173` won't load** | Preview isn't running | Start it with `npm run dev` (file 05, step 0). |
 | **Port 5173 is in use** | Another preview is already running | Use the address Vite prints (e.g. `5174`), or close the old window. |
-| **Live site doesn't show my change** | Not published, or browser cache | Publish (file 06), then hard refresh with **Ctrl + Shift + R**. |
+| **Live site doesn't show a change** | Not published, or browser cache | Publish (file 06), then hard refresh with **Ctrl + Shift + R**. |
 | **Old resume still downloads on the live site** | Browser cached the PDF | Hard refresh, or open the site in an Incognito window. |
 | **Vercel says "Logged out" / asks to log in** | Login expired | Run the login command in file 06. |
 | **`npm run dev` says "vite is not recognized"** | Libraries missing (`node_modules` deleted) | Run `npm install` once (with C: full, first run `$env:npm_config_cache="D:/npm-cache"` in PowerShell). |

@@ -11,12 +11,12 @@
 | HTTPS | Automatic |
 | Cost | ₹0 |
 
-Your local folder is linked to that project through the hidden `.vercel` folder inside
+The local folder is linked to that project through the hidden `.vercel` folder inside
 `D:\Essentials\Portfolio`. Don't delete it.
 
 ## Publishing changes (do this after every change)
 
-Editing files only changes **your computer's copy**. To update the live site:
+Editing files only changes **the local copy**. To update the live site:
 
 ### Using Git Bash (recommended)
 
@@ -46,12 +46,12 @@ It takes about 30–60 seconds. Then open https://nikhil-sai-tata.vercel.app and
 
 ### Why the extra settings?
 
-Your **C: drive is full**, so the command tells npm and Vercel to keep their downloads
-(`D:\npm-cache`, `D:\tmp`) and your login (`D:\vercel-config`) on the D: drive. If you free up space
+My **C: drive is full**, so the command tells npm and Vercel to keep their downloads
+(`D:\npm-cache`, `D:\tmp`) and the login (`D:\vercel-config`) on the D: drive. If you free up space
 on C: later, the plain command `npx vercel deploy --prod` will also work (after a one-time
 `npx vercel login`).
 
-## If you're asked to log in again
+## If Vercel asks to log in again
 
 ```bash
 npm_config_cache=D:/npm-cache TMP=D:/tmp TEMP=D:/tmp npx -y vercel@latest login --global-config D:/vercel-config
@@ -68,13 +68,13 @@ It shows a link with a code. Open it, sign in to Vercel, and approve. Then publi
 
 1. Buy the domain (GoDaddy, Namecheap, Hostinger, Cloudflare; about ₹800–1,000 per year for `.com`).
 2. Vercel → project → **Settings → Domains → Add** → type the domain.
-3. Vercel shows 1–2 DNS records. Add them in your domain provider's DNS settings.
+3. Vercel shows 1–2 DNS records. Add them in the domain provider's DNS settings.
 4. Wait 5 minutes to a few hours. HTTPS is set up automatically.
 5. Update the `og:url` and `og:image` lines in `index.html` to the new domain, then publish.
 
 ## Optional: automatic publishing with GitHub
 
-Instead of running the publish command, you can make every change go live automatically:
+Instead of running the publish command, every change can go live automatically:
 
 1. Create a GitHub repository (for example `portfolio`) and push this folder to it.
    `.env.local` and `.vercel` are already excluded by `.gitignore`, so they won't be uploaded.
@@ -83,5 +83,5 @@ Instead of running the publish command, you can make every change go live automa
 
 ## Privacy reminder
 
-Everything in `public/` is public: the resume PDF (which includes your **phone number**) and the
-three photos. If you ever want the phone number off the website, upload a resume version without it.
+Everything in `public/` is public: the resume PDF (which includes my **phone number**) and the
+three photos. To take the phone number off the website, upload a resume version without it.

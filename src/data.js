@@ -38,7 +38,7 @@ export const projects = [
     blurb:
       'Lets non-technical users query live business data in plain English. An LLM on AWS Bedrock writes the SQL, a retrieval layer helps it understand the schema, and Lambda runs everything end to end.',
     highlights: [
-      'NL→SQL generation using Amazon Bedrock with Anthropic Claude',
+      'NL→SQL generation using foundation models on Amazon Bedrock',
       'Semantic schema retrieval with Titan Text Embeddings v2 + Bedrock Knowledge Base',
       'AWS Lambda + Amazon RDS for end-to-end generation, execution and real-time answers',
       'Prompt engineering + few-shot learning: 95%+ success on 100+ advanced aggregation queries',
@@ -47,7 +47,7 @@ export const projects = [
       ['accuracy', '95%+'],
       ['queries tested', '100+'],
     ],
-    stack: ['Amazon Bedrock', 'Anthropic Claude', 'Titan Embeddings', 'RAG', 'Lambda', 'RDS', 'Python'],
+    stack: ['Amazon Bedrock', 'LLMs', 'Titan Embeddings', 'RAG', 'Lambda', 'RDS', 'Python'],
     links: [],
     flow: ['Question', 'Schema RAG', 'LLM → SQL', 'RDS → Answer'],
   },
@@ -152,7 +152,7 @@ export const experience = [
 ]
 
 export const skills = [
-  { table: 'ai_ml', label: 'AI & Machine Learning', items: ['LLM apps', 'RAG', 'LangChain', 'Amazon Bedrock', 'Bedrock Agents', 'Claude / OpenAI / Groq APIs', 'Ollama', 'Hugging Face', 'PyTorch', 'Scikit-learn', 'Few-shot prompting', 'NLP'] },
+  { table: 'ai_ml', label: 'AI & Machine Learning', items: ['LLM apps', 'RAG', 'LangChain', 'Amazon Bedrock', 'Bedrock Agents', 'OpenAI / Groq APIs', 'Ollama', 'Hugging Face', 'PyTorch', 'Scikit-learn', 'Few-shot prompting', 'NLP'] },
   { table: 'backend', label: 'Backend', items: ['Node.js', 'Express.js', 'Django', 'REST API design', 'Zod validation', 'Session auth / OAuth 2.0 / OIDC', 'RBAC', 'File uploads (Multer)'] },
   { table: 'frontend', label: 'Frontend', items: ['React 19', 'React Router', 'Vite', 'JavaScript (ES2023)', 'HTML5', 'CSS3', 'Leaflet maps', 'Accessibility'] },
   { table: 'data', label: 'Data & Databases', items: ['MySQL', 'SQL & schema design', 'Migrations', 'Geospatial queries', 'Pandas', 'NumPy', 'Matplotlib', 'EDA'] },
